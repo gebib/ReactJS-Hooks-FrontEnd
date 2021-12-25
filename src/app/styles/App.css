@@ -27,18 +27,18 @@
 }
 
 .container{
-  border: 5px solid red;
-  padding: 5px;
+  border: 2px solid red;
+  padding: 2px;
 }
 
 .row{
-  border: 5px solid green;
-  padding: 5px;
+  border: 2px solid green;
+  padding: 2px;
 }
 
 .col{
-  border: 5px solid blue;
-  padding: 5px;
+  border: 2px solid blue;
+  padding: 2px;
 }
 
 p{
