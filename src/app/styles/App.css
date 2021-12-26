@@ -26,24 +26,25 @@
   color: #61dafb;
 }
 
-.container{
-  border: 2px solid red;
-  padding: 2px;
-}
+/*///forDev////*/
+/*.container{*/
+/*  border: 2px solid red;*/
+/*  padding: 2px;*/
+/*}*/
 
-.row{
-  border: 2px solid green;
-  padding: 2px;
-}
+/*.row{*/
+/*  border: 2px solid green;*/
+/*  padding: 2px;*/
+/*}*/
 
-.col{
-  border: 2px solid blue;
-  padding: 2px;
-}
+/*.col{*/
+/*  border: 2px solid blue;*/
+/*  padding: 2px;*/
+/*}*/
 
-p{
-  border: 1px solid black;
+/*p{*/
+/*  border: 1px solid black;*/
 
-}
+/*}*/
 
 

@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from "react";
-import '../styles/ListDataComponentStyle.scss';
+import '../styles/ListDataComponentStyle.css';
 import DataService from "../services/DataService";
+import {FormComponent} from "./FormComponent";
 
-export const ListDataComponent = () => {
+
+export const TableComponent = () => {
 
     const [listDataFromDb, setListDataFromDb] = useState([
         {
             id: 0,
-            firstName: 'User1',
-            lastName: 'User1',
-            eMail: 'user1@u.com'
+            firstName: '',
+            lastName: '',
+            emailId: ''
         }
     ]);
 
@@ -25,7 +27,8 @@ export const ListDataComponent = () => {
     return (
         <div className={"container"}>
             <h2>List of Data</h2>
-            <table className="table table-success table-striped">
+            <FormComponent/>
+            <table className="table  table-striped">
                 {/*Table header*/}
                 <thead>
                 <tr>
@@ -44,7 +47,7 @@ export const ListDataComponent = () => {
                             <td>{aData.id}</td>
                             <td>{aData.firstName}</td>
                             <td>{aData.lastName}</td>
-                            <td>{aData.eMail}</td>
+                            <td>{aData.emailId}</td>
                         </tr>
                     );
                 })}
