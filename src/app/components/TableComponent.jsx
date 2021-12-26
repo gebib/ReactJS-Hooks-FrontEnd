@@ -18,8 +18,9 @@ export const TableComponent = () => {
     useEffect(() => {
             DataService.getallData().then((result) => {
                 setListDataFromDb(result.data);
+                console.log("/////::OK! getallData: ", result.data);
             }).catch((error) => {
-                console.log("ERROR: ", error);
+                console.log("/////::Error getallData: ", error);
             });
         }, []
     );

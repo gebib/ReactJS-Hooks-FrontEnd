@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import '../styles/FormComponent.css';
+import DataService from "../services/DataService";
 
 export const FormComponent = () => {
 
@@ -10,7 +11,12 @@ export const FormComponent = () => {
 
     const saveFormData = (e) => {
         e.preventDefault(); //prevent from refreshing the page on submit etc.
-        console.log(fName, " ", lName, " ", userEmail);
+        const newData = {firstName: fName, lastName: lName, emailId: userEmail};
+        DataService.createData(newData).then((response) => {
+            console.log("/////::OK! createData response: ", response.data);
+        }).catch((error) => {
+            console.log("/////::Error save form: ", error);
+        });
     };
 
     return (
