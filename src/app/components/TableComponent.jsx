@@ -19,7 +19,7 @@ export const TableComponent = () => {
             setListDataFromDb(result.data);
             console.log("/////::OK! getallData: ", result.data);
         }).catch((error) => {
-            console.log("/////::Error getallData: ", error);
+            console.log("/////::Error get allData: ", error);
         });
     };
 
