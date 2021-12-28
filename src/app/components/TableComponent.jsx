@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useReducer, useState} from "react";
 import '../styles/ListDataComponentStyle.css';
 import DataService from "../services/DataService";
 import {FormComponent} from "./FormComponent";
 
 
 export const TableComponent = () => {
-
     const [listDataFromDb, setListDataFromDb] = useState([
         {
             id: 0,
@@ -15,21 +14,29 @@ export const TableComponent = () => {
         }
     ]);
 
+    const fetchDataFromDb = () => {
+        DataService.getallData().then((result) => {
+            setListDataFromDb(result.data);
+            console.log("/////::OK! getallData: ", result.data);
+        }).catch((error) => {
+            console.log("/////::Error getallData: ", error);
+        });
+    };
+
     useEffect(() => {
-            DataService.getallData().then((result) => {
-                setListDataFromDb(result.data);
-                console.log("/////::OK! getallData: ", result.data);
-            }).catch((error) => {
-                console.log("/////::Error getallData: ", error);
-            });
+            fetchDataFromDb();
         }, []
     );
+
+    const reFetchFromDb = () => {
+        fetchDataFromDb();
+    };
 
     return (
         <div className={"container"}>
             <h2>List of Data</h2>
-            <FormComponent/>
-            <table className="table  table-striped">
+            <FormComponent reFetch={() => reFetchFromDb()}/>
+            <table className="table  table-striped text-start">
                 {/*Table header*/}
                 <thead>
                 <tr>

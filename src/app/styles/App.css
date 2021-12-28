@@ -22,8 +22,22 @@
   justify-content: center;
 }
 
+.groupedItems{
+  border: 1px solid rgba(107, 107, 107, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+background-color: #e3e5e1;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /*///forDev////*/
@@ -44,7 +58,10 @@
 
 /*p{*/
 /*  border: 1px solid black;*/
-
 /*}*/
+.btn{
+  min-width: 100%;
+}
+/*/////*/
 
 
