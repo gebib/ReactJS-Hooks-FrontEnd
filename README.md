@@ -7,7 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This is a simple front-end react application that runs on localhost, 
 designed to consume RestAPI via Ajax/axios library.
 
-![Blank diagram](https://user-images.githubusercontent.com/9350798/147577724-1c186118-46f5-4679-9521-83deaf9d4426.png)
 ![Screenshot 2021-12-28 133045](https://user-images.githubusercontent.com/9350798/147577753-5eaaa337-4aa0-452f-b787-e098446f65bb.png)
 
 ## Available Scripts
